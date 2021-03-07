@@ -1,6 +1,22 @@
 body {
   margin: 0;
   font-family: "Philosopher", sans-serif;
+  background: #424242;
+  color: white;
+}
+
+.container {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media (max-width: 500px) {
+  .container {
+    width: auto;
+  }
 }
 
 canvas {
@@ -9,14 +25,31 @@ canvas {
   height: 100vh;
 }
 
-.container {
-  width: 100vw;
-  height: 100vh;
-  position: fixed;
-  color: white;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+@media (min-width: 501px) {
+  .computer, canvas {
+    visibility: visible;
+  }
+}
+@media (max-width: 500px) {
+  .computer, canvas {
+    visibility: hidden;
+    display: none;
+  }
+}
+
+.mobile {
+  padding: 20px;
+}
+@media (min-width: 501px) {
+  .mobile {
+    visibility: hidden;
+    display: none;
+  }
+}
+@media (max-width: 500px) {
+  .mobile {
+    visibility: visible;
+  }
 }
 
 .link {
@@ -51,8 +84,15 @@ canvas {
   transform: translateY(-100%);
 }
 
-.main h1 {
+h1 {
   font-size: 70px;
+  text-align: center;
+  margin: 0;
+}
+@media (max-width: 500px) {
+  h1 {
+    font-size: 30px;
+  }
 }
 
 .footer {
