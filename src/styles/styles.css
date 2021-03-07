@@ -1,0 +1,65 @@
+body {
+  margin: 0;
+  font-family: "Philosopher", sans-serif;
+}
+
+canvas {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+}
+
+.container {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.link {
+  color: white;
+  font-weight: 400;
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  margin-bottom: -2px;
+  overflow: hidden;
+  padding-right: 5px;
+}
+.link span {
+  position: relative;
+  display: inline-block;
+  -webkit-transition: -webkit-transform 0.3s;
+  transition: transform 0.3s;
+}
+.link span:before {
+  position: absolute;
+  white-space: nowrap;
+  top: 100%;
+  content: attr(data-hover);
+  font-weight: 700;
+}
+.link:hover span {
+  -webkit-transform: translateY(-100%);
+  transform: translateY(-100%);
+}
+.link:focus span {
+  -webkit-transform: translateY(-100%);
+  transform: translateY(-100%);
+}
+
+.main h1 {
+  font-size: 70px;
+}
+
+.footer {
+  padding: 20px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+/*# sourceMappingURL=styles.css.map */
